@@ -139,13 +139,16 @@ export function About() {
               <div
                 key={pillar.title}
                 className="
-                  rounded-xl
+                  rounded-2xl
                   border
                   border-border
                   bg-card/50
                   p-5
-                  transition-colors
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
                   hover:border-primary/30
+                  hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)]
                   sm:p-6
                 "
               >

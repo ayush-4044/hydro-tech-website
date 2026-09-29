@@ -164,7 +164,7 @@ export function Contact() {
         scroll-mt-20
       "
     >
-      <div className="site-container">
+      <div className="site-container motion-enter">
 
         {/* MAIN GRID */}
 
@@ -262,8 +262,9 @@ export function Contact() {
             className="
               rounded-2xl
               border
-              border-border
-              bg-card/50
+              border-primary/20
+              bg-card/70
+              shadow-[0_24px_65px_rgba(0,0,0,0.18)]
               p-5
               sm:p-7
               lg:p-8

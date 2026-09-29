@@ -9,7 +9,7 @@ export default function BulkQuotePage() {
       <SiteHeader />
 
       <main className="pb-20 md:pb-0">
-        <div className="pt-16">
+        <div className="pt-[4.5rem]">
           <BulkOrderCalculator />
         </div>
       </main>

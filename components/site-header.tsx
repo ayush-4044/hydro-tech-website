@@ -157,14 +157,15 @@ export function SiteHeader() {
             ? `
               border-b
               border-border
-              bg-background/95
+            bg-background/90
+              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
               backdrop-blur-md
             `
             : `
               border-b
               border-transparent
-              bg-background/90
-              backdrop-blur-sm
+            bg-background/75
+              backdrop-blur-md
             `,
         )}
       >
@@ -178,7 +179,7 @@ export function SiteHeader() {
             z-[10000]
             mx-auto
             flex
-            h-16
+            h-[4.5rem]
             max-w-7xl
             items-center
             justify-between
@@ -237,7 +238,12 @@ export function SiteHeader() {
             className="
               hidden
               items-center
-              gap-7
+              gap-1
+              rounded-full
+              border
+              border-border/70
+              bg-card/45
+              p-1
               md:flex
             "
           >
@@ -246,10 +252,14 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className="
+                  rounded-full
+                  px-3.5
+                  py-2
                   text-sm
                   font-medium
                   text-muted-foreground
                   transition-colors
+                  hover:bg-secondary/70
                   hover:text-foreground
                 "
               >
@@ -268,6 +278,7 @@ export function SiteHeader() {
                 <Link href="/bulk-quote" />
               }
               nativeButton={false}
+              size="lg"
               className="font-semibold"
             >
               Request a Quote
@@ -353,7 +364,7 @@ export function SiteHeader() {
                 absolute
                 left-0
                 right-0
-                top-16
+                top-[4.5rem]
                 z-[10001]
                 border-t
                 border-border

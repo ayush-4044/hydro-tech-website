@@ -56,7 +56,7 @@ const COLUMNS = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-card/30">
+    <footer className="border-t border-border bg-[linear-gradient(180deg,rgba(22,36,55,0.92),rgba(13,23,36,1))]">
       <div
         className="
           mx-auto

@@ -9,7 +9,7 @@ export default function FAQPage() {
       <SiteHeader />
 
       <main className="pb-20 md:pb-0">
-        <div className="pt-16">
+        <div className="pt-[4.5rem]">
           <FAQ />
         </div>
       </main>

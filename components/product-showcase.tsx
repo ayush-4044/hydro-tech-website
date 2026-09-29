@@ -196,7 +196,7 @@ export function ProductShowcase() {
         scroll-mt-20
       "
     >
-      <div className="site-container">
+      <div className="site-container motion-enter">
 
         {/* ================================================= */}
         {/* HEADING */}
@@ -246,7 +246,7 @@ export function ProductShowcase() {
                     className={cn(
                       `
                         relative
-                        rounded-lg
+                        rounded-2xl
                         border
                         p-5
                         transition-all
@@ -256,14 +256,14 @@ export function ProductShowcase() {
                         ? `
                           border-primary/60
                           bg-card
-                          shadow-[0_0_0_1px]
-                          shadow-primary/20
+                          shadow-[0_18px_40px_rgba(0,0,0,0.18)]
                         `
                         : `
                           border-border
                           bg-card/40
                           hover:border-primary/30
                           hover:bg-card/70
+                          hover:shadow-lg
                         `,
                     )}
                   >
@@ -416,12 +416,14 @@ export function ProductShowcase() {
             className="
               relative
               overflow-hidden
-              rounded-xl
+              rounded-3xl
               border
-              border-border
-              bg-gradient-to-b
-              from-card/80
+              border-primary/20
+              bg-gradient-to-br
+              from-card
+              via-card/90
               to-background
+              shadow-[0_28px_70px_rgba(0,0,0,0.2)]
             "
           >
             {/* DOT BACKGROUND */}

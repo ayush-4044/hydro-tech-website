@@ -54,7 +54,7 @@ export default function ProductsPage() {
         {/* PAGE HERO */}
         {/* ===================================================== */}
 
-        <section className="border-b border-border pt-16 sm:pt-20">
+        <section className="border-b border-border pt-[4.5rem] sm:pt-20">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
             <div className="max-w-3xl">
 
@@ -107,7 +107,7 @@ export default function ProductsPage() {
         {/* PRODUCTS */}
         {/* ===================================================== */}
 
-        <section className="py-8 sm:py-12 lg:py-14">
+        <section className="bg-[linear-gradient(180deg,rgba(24,39,58,0.34),transparent_28rem)] pt-2 pb-8 sm:pt-4 sm:pb-12 lg:pt-6 lg:pb-14">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
             {/* FILTER HEADER */}
@@ -158,7 +158,7 @@ export default function ProductsPage() {
                       }
                       className={`rounded-full border px-4 py-2 text-xs font-medium transition-all ${
                         isActive
-                          ? 'border-primary bg-primary text-primary-foreground'
+                    ? 'border-primary bg-primary text-primary-foreground shadow-[0_8px_24px_rgba(198,156,74,0.2)]'
                           : 'border-border bg-card/40 text-muted-foreground hover:border-primary/40 hover:text-foreground'
                       }`}
                     >
@@ -200,21 +200,21 @@ export default function ProductsPage() {
             {/* PRODUCT GRID */}
 
             {filteredProducts.length > 0 ? (
-              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4">
                 {filteredProducts.map((product) => (
                   <Link
                     key={product.id}
                     href={`/products/${product.id}`}
-                    className="group overflow-hidden rounded-2xl border border-border bg-card/30 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-card"
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-card/40 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-card hover:shadow-[0_16px_40px_rgba(0,0,0,0.28)]"
                   >
 
                     {/* IMAGE */}
 
-                    <div className="relative aspect-square overflow-hidden bg-gradient-to-b from-secondary/40 via-background to-background">
+                    <div className="relative aspect-[4/3] overflow-hidden border-b border-border/60 bg-gradient-to-br from-secondary/50 via-card/70 to-background sm:aspect-square">
 
                       <div
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+                        className="pointer-events-none absolute inset-0 opacity-[0.06] transition-opacity duration-300 group-hover:opacity-[0.1]"
                         style={{
                           backgroundImage:
                             'radial-gradient(circle at center, currentColor 1px, transparent 1px)',
@@ -225,14 +225,14 @@ export default function ProductsPage() {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="relative size-full object-contain p-8 transition-transform duration-500 group-hover:scale-105"
+                        className="relative size-full object-contain p-7 transition-transform duration-500 ease-out group-hover:scale-105 sm:p-8"
                         loading="lazy"
                       />
 
                       {/* CATEGORY BADGE */}
 
                       <div className="absolute left-4 top-4">
-                        <span className="rounded-full border border-border bg-background/80 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-primary backdrop-blur-sm">
+                        <span className="rounded-full border border-primary/25 bg-background/90 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-primary shadow-sm backdrop-blur-sm">
                           {product.category}
                         </span>
                       </div>
@@ -240,13 +240,13 @@ export default function ProductsPage() {
 
                     {/* CONTENT */}
 
-                    <div className="p-5">
+                    <div className="flex flex-1 flex-col p-5 sm:p-6">
 
                       <h3 className="text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
                         {product.name}
                       </h3>
 
-                      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-2 min-h-[2.75rem] line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                         {product.description}
                       </p>
 
@@ -264,7 +264,7 @@ export default function ProductsPage() {
 
                       {/* CTA */}
 
-                      <div className="mt-5 flex items-center justify-between">
+                      <div className="mt-auto flex items-center justify-between border-t border-border/60 pt-5">
                         <span className="inline-flex items-center gap-2 text-xs font-semibold text-primary">
                           View Details
 
@@ -284,7 +284,7 @@ export default function ProductsPage() {
               /* NO PRODUCTS */
               /* ================================================= */
 
-              <div className="mt-10 rounded-2xl border border-border bg-card/30 px-6 py-16 text-center">
+                <div className="mt-10 rounded-3xl border border-border bg-card/55 px-6 py-16 text-center shadow-[0_20px_60px_rgba(0,0,0,0.14)]">
                 <Package className="mx-auto size-10 text-muted-foreground" />
 
                 <h3 className="mt-5 text-xl font-semibold text-foreground">
@@ -320,7 +320,7 @@ export default function ProductsPage() {
         <section className="border-t border-border py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 
-            <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-card/40 px-6 py-10 text-center sm:px-10 sm:py-14">
+            <div className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-card via-card/85 to-secondary/50 px-6 py-10 text-center shadow-[0_24px_70px_rgba(0,0,0,0.2)] sm:px-10 sm:py-14">
 
               <div
                 aria-hidden="true"

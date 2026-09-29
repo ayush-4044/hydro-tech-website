@@ -35,6 +35,7 @@ export function Hero() {
         overflow-hidden
         border-b
         border-border/70
+        bg-[radial-gradient(ellipse_at_78%_18%,rgba(198,156,74,0.12),transparent_36%),linear-gradient(180deg,rgba(19,33,51,0.5),transparent_78%)]
       "
     >
       {/* ================================================= */}
@@ -110,6 +111,7 @@ export function Hero() {
 
         <div
           className="
+            motion-enter
             flex
             min-w-0
             flex-col
@@ -176,7 +178,8 @@ export function Hero() {
 
             <br />
 
-            Engineered for Zero Leakage.
+            Engineered for zero Leakage.
+
           </h1>
 
           {/* ================================================= */}
@@ -368,6 +371,7 @@ export function Hero() {
 
         <div
           className="
+            motion-enter-delayed
             relative
             flex
             min-h-[360px]
@@ -416,12 +420,14 @@ export function Hero() {
               items-center
               justify-center
               overflow-hidden
-              rounded-xl
+              rounded-2xl
               border
-              border-border
-              bg-gradient-to-b
-              from-card/50
+              border-primary/20
+              bg-gradient-to-br
+              from-card
+              via-card/75
               to-background
+              shadow-[0_28px_80px_rgba(0,0,0,0.24)]
               sm:h-[440px]
               sm:rounded-2xl
               lg:h-[480px]

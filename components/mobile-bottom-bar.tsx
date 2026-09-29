@@ -59,10 +59,15 @@ export function MobileBottomBar() {
             items-center
             justify-center
             gap-1
-            text-muted-foreground
+            mx-2
+            my-2
+            rounded-xl
+            bg-primary
+            text-primary-foreground
+            shadow-[0_8px_22px_rgba(198,156,74,0.18)]
             transition-colors
-            active:bg-accent
-            hover:text-primary
+            active:scale-[0.98]
+            hover:brightness-105
           "
         >
           <FileText className="size-5" />

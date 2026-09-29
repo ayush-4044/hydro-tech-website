@@ -97,10 +97,11 @@ export function Catalog() {
 
         <div className="
           mt-8
-          rounded-xl
+          rounded-2xl
           border
           border-border
-          bg-card/40
+          bg-card/65
+          shadow-[0_16px_50px_rgba(0,0,0,0.12)]
           p-3
           sm:mt-10
           sm:p-4
@@ -336,15 +337,15 @@ export function Catalog() {
                   flex
                   flex-col
                   overflow-hidden
-                  rounded-xl
+                  rounded-2xl
                   border
                   border-border
-                  bg-card/50
+                  bg-card/70
                   transition-all
                   duration-300
                   hover:-translate-y-1
                   hover:border-primary/40
-                  hover:shadow-[0_12px_40px_rgba(0,0,0,0.25)]
+                  hover:shadow-[0_18px_45px_rgba(0,0,0,0.22)]
                 "
               >
                 {/* IMAGE */}
@@ -354,8 +355,8 @@ export function Catalog() {
                   aspect-square
                   overflow-hidden
                   bg-gradient-to-b
-                  from-secondary/40
-                  to-background
+                   from-secondary/60
+                   to-background
                 ">
                   <img
                     src={
@@ -365,7 +366,8 @@ export function Catalog() {
                     alt={item.name}
                     className="
                       size-full
-                      object-cover
+                      object-contain
+                      p-7
                       transition-transform
                       duration-500
                       group-hover:scale-105

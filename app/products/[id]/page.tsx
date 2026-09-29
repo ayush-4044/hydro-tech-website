@@ -9,6 +9,9 @@ import {
 
 import { PRODUCTS } from '@/data/products'
 import { ProductImageViewer } from '@/components/product-image-viewer'
+import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
+import { MobileBottomBar } from '@/components/mobile-bottom-bar'
 
 type ProductPageProps = {
   params: Promise<{
@@ -25,8 +28,10 @@ export default async function ProductDetailPage({
 
   if (!product) {
     return (
-      <main className="min-h-screen bg-background px-4 py-24">
-        <div className="mx-auto max-w-3xl text-center">
+      <div className="min-h-svh bg-background">
+        <SiteHeader />
+        <main className="min-h-screen bg-background px-4 pb-20 pt-32 md:pb-0">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card/70 px-6 py-16 text-center shadow-[0_24px_60px_rgba(0,0,0,0.18)] sm:px-10">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
             Product Not Found
           </p>
@@ -47,7 +52,10 @@ export default async function ProductDetailPage({
             Back to Catalog
           </Link>
         </div>
-      </main>
+        </main>
+        <SiteFooter />
+        <MobileBottomBar />
+      </div>
     )
   }
 
@@ -58,7 +66,9 @@ export default async function ProductDetailPage({
   ).slice(0, 4)
 
   return (
-    <main className="min-h-screen bg-background">
+    <div className="min-h-svh bg-background">
+    <SiteHeader />
+    <main className="min-h-screen bg-background pb-20 pt-[4.5rem] md:pb-0">
 
       {/* ===================================================== */}
       {/* TOP BAR */}
@@ -85,7 +95,7 @@ export default async function ProductDetailPage({
 
           {/* IMAGE */}
 
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-b from-card/80 to-background">
+          <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-card via-card/90 to-background shadow-[0_28px_75px_rgba(0,0,0,0.2)]">
 
             <div
               aria-hidden="true"
@@ -127,7 +137,7 @@ export default async function ProductDetailPage({
 
             {/* QUICK SPEC */}
 
-            <div className="mt-8 rounded-xl border border-primary/20 bg-card/40 p-5">
+            <div className="mt-8 rounded-2xl border border-primary/25 bg-card/70 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.12)]">
 
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="size-4 text-primary" />
@@ -197,7 +207,7 @@ export default async function ProductDetailPage({
 
             {/* CATEGORY */}
 
-            <div className="rounded-xl border border-border bg-card/40 p-6 transition-colors hover:border-primary/30">
+            <div className="rounded-2xl border border-border bg-card/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
 
               <Factory className="size-5 text-primary" />
 
@@ -213,7 +223,7 @@ export default async function ProductDetailPage({
 
             {/* COMPATIBILITY */}
 
-            <div className="rounded-xl border border-border bg-card/40 p-6 transition-colors hover:border-primary/30">
+            <div className="rounded-2xl border border-border bg-card/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
 
               <CheckCircle2 className="size-5 text-primary" />
 
@@ -238,7 +248,7 @@ export default async function ProductDetailPage({
 
             {/* PRODUCT TYPE */}
 
-            <div className="rounded-xl border border-border bg-card/40 p-6 transition-colors hover:border-primary/30">
+            <div className="rounded-2xl border border-border bg-card/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
 
               <ShieldCheck className="size-5 text-primary" />
 
@@ -414,12 +424,12 @@ export default async function ProductDetailPage({
                   className="group overflow-hidden rounded-xl border border-border bg-card/40 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
                 >
 
-                  <div className="aspect-square overflow-hidden bg-gradient-to-b from-secondary/40 to-background">
+                  <div className="aspect-square overflow-hidden bg-gradient-to-br from-secondary/60 via-card/80 to-background">
 
                     <img
                       src={relatedProduct.image}
                       alt={relatedProduct.name}
-                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="size-full object-contain p-7 transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
 
@@ -496,5 +506,8 @@ export default async function ProductDetailPage({
       </section>
 
     </main>
+    <SiteFooter />
+    <MobileBottomBar />
+    </div>
   )
 }

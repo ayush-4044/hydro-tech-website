@@ -95,7 +95,7 @@ export function BulkOrderCalculator() {
 
   return (
     <section className="site-section scroll-mt-20">
-      <div className="container">
+      <div className="site-container motion-enter">
 
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
@@ -115,7 +115,7 @@ export function BulkOrderCalculator() {
 
         {/* Main Card */}
         <div className="mx-auto mt-8 max-w-5xl sm:mt-10">
-          <div className="grid overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid overflow-hidden rounded-3xl border border-primary/20 bg-card/90 shadow-[0_28px_75px_rgba(0,0,0,0.2)] lg:grid-cols-[1.2fr_0.8fr]">
 
             {/* =========================
                 LEFT SIDE - FORM

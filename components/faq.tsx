@@ -77,10 +77,11 @@ export function FAQ() {
           mt-8
           max-w-4xl
           overflow-hidden
-          rounded-xl
+          rounded-2xl
           border
           border-border
-          bg-card/30
+          bg-card/65
+          shadow-[0_18px_55px_rgba(0,0,0,0.16)]
           sm:mt-10
         ">
           {FAQS.map((faq, index) => {
